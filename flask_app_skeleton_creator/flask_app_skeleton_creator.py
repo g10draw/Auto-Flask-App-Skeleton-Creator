@@ -16,14 +16,10 @@ def create_files(files):
 			pass
 
 def main():
-	# create root directory
-	os.mkdir(app_name)
-
-	# change to root directory
-	os.chdir(os.getcwd()+'\%s' % app_name)
-
-	# creates files in the root directory
-	create_files(root_files[:])
+	# app root directory
+	os.mkdir(app_name)  # create 
+	os.chdir(os.getcwd()+'\%s' % app_name)  # change to root directory
+	create_files(root_files[:]) # create files
 
 	# templates folder
 	os.mkdir('templates')  # create
@@ -36,7 +32,7 @@ def main():
 	# static folder
 	os.mkdir('static')  # create
 	os.chdir(os.getcwd()+'/static')  # change to static
-	os.mkdir('css')  # crate css subfolder
+	os.mkdir('css')  # create css subfolder
 	os.chdir(os.getcwd()+'/css')  # change to css folder
 	create_files(['main.css'])  # create css file
 	os.chdir('..')  # back to static folder
