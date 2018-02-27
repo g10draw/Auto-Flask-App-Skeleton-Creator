@@ -36,5 +36,5 @@ flask_app/
 Transfer this script file into your projects directory and execute it from the command prompt.
 ### 2. Using .exe application
 Convert the python script file into .exe file and place this .exe file in the projects directory and pin a shortcut to your windows taskbar.
-To convert .py to .exe: [https://py2exe.net](https://py2exe.net)
+To convert .py to .exe: [http://py2exe.net](http://py2exe.net)
 This is the best and convenient option to use this script.
