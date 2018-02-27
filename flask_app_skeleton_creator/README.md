@@ -26,8 +26,15 @@ flask_app/
 ### 2. Creates a activated virtual Environment and installs Flask module as well
 
 ### 3. Opens the Sublime text editior with the newly created flask app.
-![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creator/img/sublime.jpg "Sublime Text Editor")
+![alt text](img/sublime.JPG "sublime text")
 
 ### 4. Opens the activated windows command promt
-![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creator/img/cmd.jpg "Activated Command Prompt")
+![alt text](img/cmd.JPG "command prompt")
 
+## Best possible ways to use this script:
+### 1. From project directory
+Transfer this script file into your projects directory and execute it from the command prompt.
+### 2. Using .exe application
+Convert the python script file into .exe file and place this .exe file in the projects directory and pin a shortcut to your windows taskbar.
+To convert .py to .exe: [https://py2exe.net](https://py2exe.net)
+This is the best and convenient option to use this script.
