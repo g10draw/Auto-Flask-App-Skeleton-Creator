@@ -26,8 +26,8 @@ flask_app/
 ### 2. Creates a activated virtual Environment and installs Flask module as well
 
 ### 3. Opens the Sublime text editior with the newly created flask app.
-![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creatro/img/sublime.jpg "Sublime Text Editor")
+![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creator/img/sublime.jpg "Sublime Text Editor")
 
 ### 4. Opens the activated windows command promt
-![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creatro/img/cmd.jpg "Activated Command Prompt")
+![alt text](https:/github.com/g10draw/python-scripts/flask_app_skeleton_creator/img/cmd.jpg "Activated Command Prompt")
 
