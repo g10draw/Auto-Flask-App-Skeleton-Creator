@@ -4,8 +4,8 @@ import subprocess
 # Get Application name
 app_name = input('Enter your flask application name: ')
 
-# files to be created in root directory
-root_files = ['app.py', 'views.py', 'forms.py', 
+# files to be created in the root directory
+root_files = ['app.py', '__init__.py', 'views.py', 'forms.py', 
               'config.py', 'models.py', 'ProcFile',
                'README.md', 'requirements.txt']
 
@@ -36,8 +36,8 @@ def main():
 	os.chdir(os.getcwd()+'/css')  # change to css folder
 	create_files(['main.css'])  # create css file
 	os.chdir('..')  # back to static folder
-	os.mkdir('js')  # create js folder
-	os.mkdir('img')  # create img folder
+	os.mkdir('js')  # create js subfolder
+	os.mkdir('img')  # create img subfolder
 
 	# Back to root directory
 	os.chdir('..')
