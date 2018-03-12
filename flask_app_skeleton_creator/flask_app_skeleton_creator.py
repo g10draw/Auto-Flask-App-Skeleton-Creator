@@ -8,8 +8,9 @@ app_name = input('Enter your flask application name: ')
 env_name = input('Enter virtual environment name: ')
 
 # files to be created
-root_files = ['run.py', 'config.py', 'requirements.txt']
+root_files = ['run.py', 'config.py', 'ProcFile', 'README.md', 'requirements.txt']
 app_dir_files = ['__init__.py', 'views.py', 'models.py', 'forms.py']
+template_files = ['layout.html', 'index.html']
 
 def create_empty_files(files):
 	""" Creates empty files """
@@ -17,7 +18,7 @@ def create_empty_files(files):
 		with open(file, 'w'):
 			pass
 
-def create_directory(dir_name, file_names=[], change_dir=False):
+def create_directory(dir_name, file_names, change_dir=False):
 	""" Creates a directory and its respective files """
 	os.mkdir(dir_name)
 	os.chdir(os.getcwd()+'\%s' % dir_name)
@@ -35,14 +36,17 @@ def main():
 	# app directory
 	create_directory(app_name, app_dir_files[:])
 
+	# templates folder
+	create_directory('templates', template_files[:], True)
+
 	# static folder
-	create_directory('static', True)
+	create_directory('static', [])
 	create_directory('css', ['main.css'], True)  # css subfolder
 	create_directory('js', ['main.js'], True)  # js subfloder
-	create_directory('img', True)  # img subfolder
+	create_directory('img', [], True)  # img subfolder
 
 	# Back to root directory
-	os.chdir('..')
+	os.chdir('../..')
 
 	# 1. Create virtual environment
 	# 2. Change directory
