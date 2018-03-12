@@ -4,40 +4,42 @@ import subprocess
 # Get Application name
 app_name = input('Enter your flask application name: ')
 
-# files to be created in the root directory
-root_files = ['app.py', '__init__.py', 'views.py', 'forms.py', 
-              'config.py', 'models.py', 'ProcFile',
-               'README.md', 'requirements.txt']
+# Get Environment name
+env_name = input('Enter virtual environment name: ')
 
-def create_files(files):
-	"""Creates empty files """
+# files to be created
+root_files = ['run.py', 'config.py', 'requirements.txt']
+app_dir_files = ['__init__.py', 'views.py', 'models.py', 'forms.py']
+
+def create_empty_files(files):
+	""" Creates empty files """
 	for file in files:
 		with open(file, 'w'):
 			pass
 
+def create_directory(dir_name, file_names=[], change_dir=False):
+	""" Creates a directory and its respective files """
+	os.mkdir(dir_name)
+	os.chdir(os.getcwd()+'\%s' % dir_name)
+	create_empty_files(file_names)
+	if change_dir:
+		os.chdir('..')
+
 def main():
-	# app root directory
-	os.mkdir(app_name)  # create 
-	os.chdir(os.getcwd()+'\%s' % app_name)  # change to root directory
-	create_files(root_files[:]) # create files
+	# root directory
+	create_directory(app_name, root_files[:])
 
-	# templates folder
-	os.mkdir('templates')  # create
-	os.chdir(os.getcwd()+'/templates')  # change to templates
-	create_files(['layout.html', 'index.html'])  # create html files
+	# instance folder
+	create_directory('instance',['config.py'], True)
 
-	# back to root directory
-	os.chdir('..')
+	# app directory
+	create_directory(app_name, app_dir_files[:])
 
 	# static folder
-	os.mkdir('static')  # create
-	os.chdir(os.getcwd()+'/static')  # change to static
-	os.mkdir('css')  # create css subfolder
-	os.chdir(os.getcwd()+'/css')  # change to css folder
-	create_files(['main.css'])  # create css file
-	os.chdir('..')  # back to static folder
-	os.mkdir('js')  # create js subfolder
-	os.mkdir('img')  # create img subfolder
+	create_directory('static', True)
+	create_directory('css', ['main.css'], True)  # css subfolder
+	create_directory('js', ['main.js'], True)  # js subfloder
+	create_directory('img', True)  # img subfolder
 
 	# Back to root directory
 	os.chdir('..')
@@ -49,13 +51,13 @@ def main():
 	# 5. Install flask module
 	# 6. Open sublime text
 	# 7. Open activated command promt
-	subprocess.call('virtualenv venv && \
-		             cd venv/Scripts && \
+	subprocess.call('virtualenv {} && \
+		             cd {}/Scripts && \
 		             activate && \
 		             cd ../.. && \
 		             pip install flask && \
 		             subl . && \
-		             start', 
+		             start'.format(env_name, env_name), 
 		             shell=True)
 
 if __name__ == '__main__':
