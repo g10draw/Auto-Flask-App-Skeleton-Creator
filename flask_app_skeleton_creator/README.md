@@ -4,24 +4,25 @@ This python script creates the basic structure of a flask web application with a
 ## This script executes four main steps:
 ### 1. Creates a Flask Web App File Structure
 ```
-flask_app/
-        - static/
-              - css/
-              - js/
-              - img/
-        - templates/
-              - layout.html
-              - index.html
-        - venv/
-        - __init__.py
-        - app.py
-        - config.py
-        - forms.py
-        - models.py
-        - views.py
-        - ProcFile
-        - requirements.py
-        - README.md
+your_app/
+    config.py
+    PorcFile
+    requirements.txt
+    README.md
+    run.py
+    instance/
+        config.py
+    venv/
+    yourapp/
+        __init__.py
+        views.py
+        models.py
+        forms.py
+        static/
+            css/
+            js/
+            img/
+        templates/
 ```
 ### 2. Creates a activated virtual Environment and installs Flask module as well
 
