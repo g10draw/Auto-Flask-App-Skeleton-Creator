@@ -35,7 +35,7 @@ your_app/
 ![alt text](img/cmd.JPG "command prompt")
 
 ## NOTE:
-This script executes successfully in windows environment only and there is need to set sublime text editor as your default text editor with alias name 'subl'.
+This script is wirtten in context of Windows OS and there is need to set sublime text editor as a default text editor with alias name 'subl'.
 
 ## Best possible ways to use this script:
 ### 1. From project directory
