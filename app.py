@@ -1,10 +1,10 @@
 import os
 import subprocess
 
-# Get Application name
+# Get App name
 app_name = input('Enter your flask application name: ')
 
-# Get Environment name
+# Get virtual environment name
 env_name = input('Enter virtual environment name: ')
 
 # files to be created
@@ -21,7 +21,7 @@ def create_empty_files(files):
 def create_directory(dir_name, file_names, change_dir=False):
 	""" Creates a directory and its respective files """
 	os.mkdir(dir_name)
-	os.chdir(os.getcwd()+'\%s' % dir_name)
+	os.chdir(os.getcwd()+'\\%s' % dir_name)
 	create_empty_files(file_names)
 	if change_dir:
 		os.chdir('..')
@@ -63,6 +63,7 @@ def main():
 		             subl . && \
 		             start'.format(env_name, env_name), 
 		             shell=True)
+
 
 if __name__ == '__main__':
 	main()
