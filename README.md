@@ -1,5 +1,5 @@
-# Flask Application Skeleton Creator
-This python script creates the basic structure of a flask application and opens command promt with activated virtual environment and pre-installed flask module.
+# Flask App Skeleton Creator
+This script creates the basic structure of a flask application with virtually activated command prompt, sublime text editor and pre installs few modules.
 
 ## This script executes in four steps:
 ### 1. Creates a Flask Web App File Structure
@@ -33,6 +33,9 @@ your_app/
 
 ### 4. Opens the activated windows command promt
 ![alt text](img/cmd.JPG "command prompt")
+
+## NOTE:
+This script executes successfully in windows environment only and there is need to set sublime text editor as your default text editor with alias name 'subl'.
 
 ## Best possible ways to use this script:
 ### 1. From project directory
