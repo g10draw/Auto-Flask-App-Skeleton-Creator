@@ -1,7 +1,7 @@
 # Flask Application Skeleton Creator
-This python script creates the basic structure of a flask web application with activated virtual environment and pre-installed flask module.
+This python script creates the basic structure of a flask application and opens command promt with activated virtual environment and pre-installed flask module.
 
-## This script executes four main steps:
+## This script executes in four steps:
 ### 1. Creates a Flask Web App File Structure
 ```
 your_app/
@@ -23,6 +23,8 @@ your_app/
             js/
             img/
         templates/
+            layout.html
+            index.html
 ```
 ### 2. Creates a activated virtual Environment and installs Flask module as well
 
